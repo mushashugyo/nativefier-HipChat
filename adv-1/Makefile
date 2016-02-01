@@ -8,3 +8,8 @@ icon.icns: $(wildcard icon.iconset/*.png)
 
 $(APP_PATH): icon.icns
 	nativefier --icon $< --app-name "$(APP_NAME)" "https://mushashugyo-adv-1.hipchat.com/chat"
+
+
+clean:
+	rm -rf icon.icns $(dir $(APP_PATH))
+	find . -name .DS_Store -delete
